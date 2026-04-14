@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Game Suite 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="logo">PROFESSIONAL GAME</div>
+        <div class="progress-outer"><div id="progress-inner"></div></div>
+        <p id="loading-status">Система жүктөлүүдө... 0%</p>
+    </div>
+
+    <div id="login-screen" class="hidden">
+        <div class="box">
+            <h1>PLAYER LOGIN</h1>
+            <input type="text" id="player-name" placeholder="Атыңызды жазыңыз...">
+            <button onclick="enterGame()">КИРҮҮ</button>
+        </div>
+    </div>
+
+    <div id="main-menu" class="hidden">
+        <header>
+            <div class="user-info">
+                <span id="user-display">Оюнчу: </span>
+                <span class="score-badge">Score: <span id="total-score">0</span></span>
+            </div>
+        </header>
+        <div class="menu-grid">
+            <div class="game-card" onclick="startApp('typing')">⌨️ TYPE MASTER<br><small>Узун тексттер</small></div>
+            <div class="game-card" onclick="startApp('quiz')">🇰🇬 KYRGYZ TEST<br><small>100 уникалдуу тест</small></div>
+        </div>
+    </div>
+
+    <div id="arena" class="hidden">
+        <div class="arena-header">
+            <button class="exit-btn" onclick="toMenu()">⬅️ MENU</button>
+            <div id="timer-display">Убакыт: 00</div>
+            <div id="level-display">Level: 1/10</div>
+        </div>
+        <div id="game-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
